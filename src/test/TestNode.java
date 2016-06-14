@@ -139,12 +139,12 @@ public class TestNode extends Sr3Node {
 		    vertexRD.color = pink;
 		    vertexRTB.color = pink;
 		    vertexRDB.color = pink;
-		    vertexRT.setUV(0, 1);
-		    vertexRD.setUV(1, 1);
-		    vertexRTB.setUV(1, 0);
+		    vertexRT.setUV(1, 1);
+		    vertexRD.setUV(1, 0);
+		    vertexRTB.setUV(0, 1);
 		    vertexRDB.setUV(0, 0);
-//		    Sr3Api.AddTri(vertexRT, vertexRTB, vertexRDB, textureID4);
-//		    Sr3Api.AddTri(vertexRT, vertexRD, vertexRDB, textureID4);
+		    Sr3Api.AddTri(vertexRT, vertexRTB, vertexRDB, textureID4);
+		    Sr3Api.AddTri(vertexRT, vertexRD, vertexRDB, textureID4);
 		    
 		    // up
 		    vertexLT.color = red;
@@ -153,10 +153,10 @@ public class TestNode extends Sr3Node {
 		    vertexRTB.color = red;
 		    vertexLT.setUV(0, 1);
 		    vertexRT.setUV(1, 1);
-		    vertexLTB.setUV(1, 0);
-		    vertexRTB.setUV(0, 0);
-//		    Sr3Api.AddTri(vertexLT, vertexRT, vertexLTB, textureID5);
-//		    Sr3Api.AddTri(vertexRT, vertexRTB, vertexLTB, textureID5);
+		    vertexLTB.setUV(0, 0);
+		    vertexRTB.setUV(1, 0);
+		    Sr3Api.AddTri(vertexLT, vertexRT, vertexLTB, textureID5);
+		    Sr3Api.AddTri(vertexRT, vertexRTB, vertexLTB, textureID5);
 		    
 		    // bottom
 		    vertexLD.color = yellow;
@@ -165,10 +165,10 @@ public class TestNode extends Sr3Node {
 		    vertexLDB.color = yellow;
 		    vertexLD.setUV(0, 0);
 		    vertexRD.setUV(1, 0);
-		    vertexLDB.setUV(1, 1);
-		    vertexRDB.setUV(0, 1);
-//		    Sr3Api.AddTri(vertexLD, vertexRD, vertexLDB, textureID6);
-//		    Sr3Api.AddTri(vertexRDB, vertexRD, vertexLDB, textureID6);
+		    vertexLDB.setUV(0, 1);
+		    vertexRDB.setUV(1, 1);
+		    Sr3Api.AddTri(vertexLD, vertexRD, vertexLDB, textureID6);
+		    Sr3Api.AddTri(vertexRDB, vertexRD, vertexLDB, textureID6);
 		    
 		    Sr3Api.End(m_matrix);
 	}
