@@ -52,8 +52,6 @@ public class Sr3Vector {
 	    return this;
 	};
 	
-	
-	
 	public Sr3Vector plus(Sr3Vector v){
 		setVal(x + v.x , y + v.y , z + v.z);
 		return this;

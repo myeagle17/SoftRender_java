@@ -27,10 +27,11 @@ public class Sr3Canvas {
 	}
 	
 	public void pushPixel(int x ,int y , int z , Color color){
-		if (x>= m_width && y >= m_height)return ;
+		if (x<0||y<0||x>= m_width || y >= m_height){	
+			return ;
+		}
 	    
 	    int index = (m_height-y)*m_width + x;
-	    
 	    // 深度测试
 	    if (!m_depthTest.setDepthAndGetResult(index, z)){
 	        return;

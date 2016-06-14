@@ -3,6 +3,7 @@ package test;
 import java.awt.Color;
 
 import softRender.core.Sr3Api;
+import softRender.core.Sr3Global;
 import softRender.core.Sr3TextureCache;
 import softRender.core.Sr3Vertex;
 import softRender.game.Sr3Node;
@@ -46,6 +47,7 @@ public class TestNode extends Sr3Node {
 	    m_matrix.rotationX((float) Math.toRadians(step11));
 	    step11 += 1.00f;
 	    off += 0.01f;
+	    //Sr3Global.cameraMatrix.translation(new Sr3Vector(0.0f,0.0f,50.0f));
 	}
 
 	@Override
@@ -100,9 +102,9 @@ public class TestNode extends Sr3Node {
 		    Sr3Vertex vertexLDB= new Sr3Vertex(new Sr3Vector(-0.25f,-0.25f,-0.25f),new Sr3Vector(),0,1,new Color(0.0f,0.0f,0.0f));
 		    
 		    vertexLT.color = red;
-		    vertexRT.color = red;
-		    vertexRD.color = red;
-		    vertexLD.color = red;
+		    vertexRT.color = yellow;
+		    vertexRD.color = new Color(0.0f,0.0f,1.0f);
+		    vertexLD.color = green;
 		    vertexLT.setUV(0, 1);
 		    vertexRT.setUV(1, 1);
 		    vertexRD.setUV(1, 0);

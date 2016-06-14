@@ -8,7 +8,7 @@ public class Sr3Global {
 	
 	static Sr3Triangle triangle;
 
-	static Sr3Matrix cameraMatrix;
+	public static Sr3Matrix cameraMatrix;
 	
 	public static void transPosToScreen(Sr3Vertex vertex, Sr3Matrix projectMatrix)
     {
